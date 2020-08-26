@@ -22,6 +22,6 @@ std::string echo(int length, char** chars) {
 			ret += " ";
 		}
 	}
-	ret += "\n";
+	// ret += "\n";
 	return ret;
 }
