@@ -30,7 +30,7 @@ int main() {
 	Base* six = new Op(6);
 	Base* TreeC = new Sub(ten, six);
 
-	VectorContainer* vecs = new VectorContainer();
+	container* vecs = new VectorContainer();
 	vecs->add_element(TreeA);
 	vecs->add_element(TreeB);
 	vecs->add_element(TreeC);
@@ -49,6 +49,66 @@ int main() {
 	cout << vecs->at(2)->evaluate() << endl;
 	vecs->print();
 	cout << endl;
-
+	
+	container* vecb = new VectorContainer();
+    	vecb->add_element(TreeA);
+    	vecb->add_element(TreeB);
+    	vecb->add_element(TreeC);
+    	
+    	cout << vecb->at(0)->evaluate() << endl;
+    	cout << vecb->at(1)->evaluate() << endl;
+    	cout << vecb->at(2)->evaluate() << endl;
+    	vecb->print();
+    	cout << endl;
+    	
+    	vecb->set_sort_function(new BubbleSort());
+    	vecb->sort();
+    	
+    	cout << vecb->at(0)->evaluate() << endl;
+    	cout << vecb->at(1)->evaluate() << endl;
+    	cout << vecb->at(2)->evaluate() << endl;
+    	vecb->print();
+    	cout << endl;
+    	
+    	container* lists = new ListContainer();
+    	lists->add_element(TreeA);
+    	lists->add_element(TreeB);
+    	lists->add_element(TreeC);
+    	
+    	cout << lists->at(0)->evaluate() << endl;
+    	cout << lists->at(1)->evaluate() << endl;
+    	cout << lists->at(2)->evaluate() << endl;
+    	lists->print();
+    	cout << endl;
+   	 
+    	lists->set_sort_function(new SelectionSort());
+    	lists->sort();
+    	
+    	cout << lists->at(0)->evaluate() << endl;
+    	cout << lists->at(1)->evaluate() << endl;
+    	cout << lists->at(2)->evaluate() << endl;
+    	lists->print();
+    	cout << endl;
+    	
+    	ListContainer* listb = new ListContainer();
+    	listb->add_element(TreeA);
+    	listb->add_element(TreeB);
+    	listb->add_element(TreeC);
+    	
+    	cout << listb->at(0)->evaluate() << endl;
+    	cout << listb->at(1)->evaluate() << endl;
+    	cout << listb->at(2)->evaluate() << endl;
+    	listb->print();
+    	cout << endl;
+    	
+    	listb->set_sort_function(new BubbleSort());
+    	listb->sort();
+    	
+    	cout << listb->at(0)->evaluate() << endl;
+    	cout << listb->at(1)->evaluate() << endl;
+    	cout << listb->at(2)->evaluate() << endl;
+    	listb->print();
+    	cout << endl;
+	
 	return 0;
 }
