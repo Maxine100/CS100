@@ -12,16 +12,17 @@ class ListContainer : public Container {
 		ListContainer() : Container() { }
 		ListContainer(Sort* function) : Container(function) { }
 		void add_element(Base* element) {
-			myList.push_bush(element);
+			myList.push_back(element);
 		}
 		void print() {
 			list<Base*>::iterator it;
-			for (it = myList.begin() it != myList.end() ++it) {
+			for (it = myList.begin(); it != myList.end(); ++it) {
 				cout << (*it)->stringify() << endl;
 			}
 		}
 		void sort() {
-			sort_function()->sort(this);
+			// cout << "Bubble sorting." << endl;
+			sort_function->sort(this);
 		}
 		void swap(int i, int j) {
 			list<Base*>::iterator it1;
@@ -29,7 +30,7 @@ class ListContainer : public Container {
 			for (int k = 0; k < i; ++k) {
 				++it1;
 			}
-			list<Base*>:: iterator it2;
+			list<Base*>::iterator it2;
 			it2 = myList.begin();
 			for (int k = 0; k < j; ++k) {
 				++it2;
@@ -50,4 +51,5 @@ class ListContainer : public Container {
 			return myList.size();
 		}
 };
+
 #endif
