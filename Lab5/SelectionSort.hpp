@@ -8,7 +8,7 @@ class SelectionSort : public Sort {
 			int i;
 			int j;
 			int first;
-			for (i = container->size() - 1; i > 0 i--) {
+			for (i = container->size() - 1; i > 0; i--) {
 				first = 0;
 				for (j = 1; j <= i; j++) {
 					if (container->at(j) < container->at(first)) {
