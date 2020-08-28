@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cmath>
+#include <cstdlib>
 
 using namespace std;
 
@@ -30,85 +32,106 @@ int main() {
 	Base* six = new Op(6);
 	Base* TreeC = new Sub(ten, six);
 
-	container* vecs = new VectorContainer();
-	vecs->add_element(TreeA);
-	vecs->add_element(TreeB);
-	vecs->add_element(TreeC);
-
-	cout << vecs->at(0)->evaluate() << endl;
-	cout << vecs->at(1)->evaluate() << endl;
-	cout << vecs->at(2)->evaluate() << endl;
-	vecs->print();
-	cout << endl;
-
-	vecs->set_sort_function(new SelectionSort());
-	vecs->sort();
-
-	cout << vecs->at(0)->evaluate() << endl;
-	cout << vecs->at(1)->evaluate() << endl;
-	cout << vecs->at(2)->evaluate() << endl;
-	vecs->print();
+	cout << "Creating vector container." << endl;
+	Container* veca = new VectorContainer();
+	veca->add_element(TreeA);
+	veca->add_element(TreeB);
+	veca->add_element(TreeC);
+	
+	cout << "Vector container elements." << endl;
+	cout << veca->at(0)->evaluate() << endl;
+	cout << veca->at(1)->evaluate() << endl;
+	cout << veca->at(2)->evaluate() << endl;
+	veca->print();
 	cout << endl;
 	
-	container* vecb = new VectorContainer();
+	cout << "Creating selection sort." << endl;
+	veca->set_sort_function(new SelectionSort());
+	cout << "Sorting" << endl;
+	veca->sort();
+
+	cout << "Vector container after selection sort." << endl;
+	cout << veca->at(0)->evaluate() << endl;
+	cout << veca->at(1)->evaluate() << endl;
+	cout << veca->at(2)->evaluate() << endl;
+	veca->print();
+	cout << endl;
+	
+	cout << "Creating vector container." << endl;
+	Container* vecb = new VectorContainer();
     	vecb->add_element(TreeA);
     	vecb->add_element(TreeB);
     	vecb->add_element(TreeC);
     	
+	cout << "Vector container elememnts." << endl;
     	cout << vecb->at(0)->evaluate() << endl;
     	cout << vecb->at(1)->evaluate() << endl;
     	cout << vecb->at(2)->evaluate() << endl;
     	vecb->print();
     	cout << endl;
     	
+	cout << "Creating bubble sort." << endl;
     	vecb->set_sort_function(new BubbleSort());
+	cout << "Sorting" << endl;
     	vecb->sort();
     	
+	cout << "Vector container after bubble sort." << endl;
     	cout << vecb->at(0)->evaluate() << endl;
     	cout << vecb->at(1)->evaluate() << endl;
     	cout << vecb->at(2)->evaluate() << endl;
     	vecb->print();
     	cout << endl;
     	
-    	container* lists = new ListContainer();
-    	lists->add_element(TreeA);
-    	lists->add_element(TreeB);
-    	lists->add_element(TreeC);
+	cout << "Creating list container." << endl;
+    	Container* lista = new ListContainer();
+    	lista->add_element(TreeA);
+    	lista->add_element(TreeB);
+    	lista->add_element(TreeC);
     	
-    	cout << lists->at(0)->evaluate() << endl;
-    	cout << lists->at(1)->evaluate() << endl;
-    	cout << lists->at(2)->evaluate() << endl;
-    	lists->print();
+	cout << "List container elements." << endl;
+    	cout << lista->at(0)->evaluate() << endl;
+    	cout << lista->at(1)->evaluate() << endl;
+    	cout << lista->at(2)->evaluate() << endl;
+    	lista->print();
     	cout << endl;
    	 
-    	lists->set_sort_function(new SelectionSort());
-    	lists->sort();
+	cout << "Creating selection sort." << endl;
+    	lista->set_sort_function(new SelectionSort());
+	cout << "Sorting" << endl;
+    	lista->sort();
     	
-    	cout << lists->at(0)->evaluate() << endl;
-    	cout << lists->at(1)->evaluate() << endl;
-    	cout << lists->at(2)->evaluate() << endl;
-    	lists->print();
+	cout << "List container after selection sort." << endl;
+    	cout << lista->at(0)->evaluate() << endl;
+    	cout << lista->at(1)->evaluate() << endl;
+    	cout << lista->at(2)->evaluate() << endl;
+    	lista->print();
     	cout << endl;
     	
-    	ListContainer* listb = new ListContainer();
+	cout << "Creating list container." << endl;
+    	Container* listb = new ListContainer();
     	listb->add_element(TreeA);
     	listb->add_element(TreeB);
     	listb->add_element(TreeC);
     	
+	cout << "List container elements." << endl;
     	cout << listb->at(0)->evaluate() << endl;
     	cout << listb->at(1)->evaluate() << endl;
     	cout << listb->at(2)->evaluate() << endl;
     	listb->print();
     	cout << endl;
     	
+	cout << "Creating bubble sort." << endl;
     	listb->set_sort_function(new BubbleSort());
+	cout << "Sorting" << endl;
+	// I'm not sure why, but if there isn't a cout statement here the following function won't execute.
     	listb->sort();
-    	
-    	cout << listb->at(0)->evaluate() << endl;
-    	cout << listb->at(1)->evaluate() << endl;
-    	cout << listb->at(2)->evaluate() << endl;
-    	listb->print();
-    	cout << endl;
 	
+	cout << "List container after bubble sort." << endl;
+	cout << listb->at(0)->evaluate() << endl;
+	cout << listb->at(1)->evaluate() << endl;
+	cout << listb->at(2)->evaluate() << endl;
+	listb->print();
+	cout << endl;
+
 	return 0;
 }
