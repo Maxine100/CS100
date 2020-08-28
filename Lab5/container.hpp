@@ -9,7 +9,7 @@ class Container {
 	public:
 		/* Constructors */
 		Container() : sort_function(nullptr) { };
-		Container(Sort* function) : sort_function(Sort* sort_function) { };
+		Container(Sort* function) : sort_function(sort_function) { };
 
 		/* Non Virtual Functions */
 		void set_sort_function(Sort* sort_function) { // Set the type of sorting alogirhtm.
