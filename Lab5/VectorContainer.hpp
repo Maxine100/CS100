@@ -8,7 +8,7 @@ class VectorContainer : public Container {
 		vector<Base*> myVector;
 	
 	public:
-		VectorContainer() : public Container() { }
+		VectorContainer() : Container() { }
 		VectorContainer(Sort* function) : Container(function) { }
 		void add_element(Base* element) {
 			myVector.push_back(element);
