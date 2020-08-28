@@ -123,7 +123,7 @@ int main() {
 	cout << "Creating bubble sort." << endl;
     	listb->set_sort_function(new BubbleSort());
 	cout << "Sorting" << endl;
-	// I'm not sure why, but if there isn't a cout statement here the following function won't execute.
+	// I'm not sure why, but if there isn't a cout statement here the following function won't execute (I'm working on Ubuntu).
     	listb->sort();
 	
 	cout << "List container after bubble sort." << endl;
