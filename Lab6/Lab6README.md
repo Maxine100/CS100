@@ -10,7 +10,7 @@ ceil(3 + 7 * 4 - 2)
 ```
 This expression would be represented with the following tree, with the top most node being a decorator:
 
-![Equation tree for Decorator Pattern](https://github.com/cs100/lab05-decoratorPattern/blob/master/images/decorator.png)
+![Equation tree for Decorator Pattern](https://github.com/Maxine100/CS100/blob/master/Lab6/images/decorator.png)
 
 You can see how the ceiling function simply modifies the return of the statement, and that the return value at the top would be the ceiling of the equation below which it should transparently enclose. You will be in charge of building four separate decorator classes, three of which modify the `evaluate()` function and one which modifies the `stringify()` function. 
 
