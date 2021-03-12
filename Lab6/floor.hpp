@@ -1,4 +1,4 @@
-#ifndef FLOOD_HPP
+#ifndef FLOOR_HPP
 #define FLOOR_HPP
 
 class Floor : public Base {
