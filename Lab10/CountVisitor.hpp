@@ -26,7 +26,7 @@ class CountVisitor {
 			divs = 0;
 			pows = 0;
 			abss = 0;
-			ceils = 0
+			ceils = 0;
 			floors = 0;
 			parens = 0;
 			truncs = 0;
@@ -36,7 +36,8 @@ class CountVisitor {
 		}
 		int op_count() {
 			return ops;
-		}void visit_rand() {
+		}
+		void visit_rand() {
 			++rands;
 		}
 		int rand_count() {
@@ -81,7 +82,7 @@ class CountVisitor {
 		void visit_ceil() {
 			++ceils;
 		}
-		int ceils_count() {
+		int ceil_count() {
 			return ceils;
 		}
 		void visit_floor() {
