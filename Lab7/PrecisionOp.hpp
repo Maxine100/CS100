@@ -1,4 +1,4 @@
-#ifndef PRECISIONoP_HPP
+#ifndef PRECISIONOP_HPP
 #define PRECISIONOP_HPP
 
 class PrecisionOp : public Op {
