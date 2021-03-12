@@ -4,11 +4,11 @@
 class Menu {
 	private:
 		int history_index; // Index which command was last executed, accounting for undo and redo functions.
-		vector<Command*> history; // Holds al the commands that have ben executed until now.
+		vector<Command*> history; // Holds all the commands that have ben executed until now.
 	
 	public:
 		Menu() {
-			//Constructor which initializes the internal members.
+			// Constructor which initializes the internal members.
 			history_index = -1;
 		}
 		string execute() {
