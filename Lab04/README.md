@@ -1,4 +1,4 @@
- Composite Pattern
+# Composite Pattern
 
 > Author: Jimmy Tran, Brian Crites ([@brrcrites](https://github.com/brrcrites))
 
@@ -8,11 +8,11 @@ In this lab you will creating a composite pattern for representing an expression
 
 ```
 3 + 7 * 4 - 2
-```
+`
 
 would be represented with the following expression tree
 
-![example expression tree](https://github.com/Maxine100/CS100/blob/master/Lab4/images/intro-tree.png)
+![example expression tree](https://github.com/Maxine100/CS100/blob/master/Lab04/images/intro-tree.png)
 
 The depth of each operation and its operands is based on their precedence, with the highest precedence operations being at the lowest levels of the tree. The first expression to be executed (in this case, `7 * 4`) will be at the deepest level. The result of that calculation then becomes an input to the addition (which becomes `3 + 28`), and that result becomes an input to the subtraction (`31 - 2`). The tree is evaluated recursively using a head recursive so the evaluation travels from the bottom to the top in order to yield the correct result.
 
