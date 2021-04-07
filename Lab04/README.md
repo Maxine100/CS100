@@ -8,7 +8,7 @@ In this lab you will creating a composite pattern for representing an expression
 
 ```
 3 + 7 * 4 - 2
-`
+```
 
 would be represented with the following expression tree
 
